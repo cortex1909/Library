@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template</title>
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+
+    <nav>
+      <p>cortex19 <strong>Library</strong></p>
+  </nav>
+  <div class="container">
+    <table id="tableBooks">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Year</th>
+          <th>Pages</th>
+          <th>Action</th>
+          <th>Read</th>
+        </tr>
+      </thead>
+      <tbody id='tbody'></tbody>
+
+    </table>
+    <button id="addNew" class="addNew">ADD NEW</button>
+  </div>
+    
+  <div class="modal-azr" id="addModal">
+    <div class="modal-azr-content">
+      <span class="close-modal">&times;</span>
+      <div class="modal-container">
+        <label for="Title">Title</label>
+        <input type="text" name="title" id="title">
+        <label for="Author">Author</label>
+        <input type="text" name="author" id="author">
+        <label for="Year">Year</label>
+        <input type="text" name="year" id="year">
+        <label for="Pages">Pages</label>
+        <input type="text" name="pages" id="pages">
+        <div class="read"><label for="Read">Read</label>
+          <input type="checkbox" name="read" id="read"></div>
+        <button id="addBook" class="addNew">ADD</button>
+      </div>
+    </div>
+  </div>
+
+  </body>
+  <script src="modal.js"></script>
+  <script src="./script.js"></script>
+</html>
