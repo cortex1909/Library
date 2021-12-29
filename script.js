@@ -30,23 +30,28 @@ const DEFAULT_DATA = [
 
 let myLibrary = []
 
-Book = () => {
-    // constructor
+class Book {
+    constructor(title, author, year, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.year = year;
+        this.pages = pages;
+        this.read = read;
+    }
 }
-
 addBookToLibrary = (_title, _author, _year, _pages, _read) => {
-    const objectToPush = {title: _title, author: _author, year: _year,pages: _pages, read: _read}
-    myLibrary.push(objectToPush)
+    const newBook = new Book(_title, _author, _year, _pages, _read)
+    myLibrary.push(newBook)
     printBook()
 }
 
-window.deleteBook = (id) => {
+deleteBook = (id) => {
     myLibrary.splice(id, 1)
     tableBody.innerHTML = ''
     printBook()
 }
 
-window.updateBook = (id, readBook) => {
+updateBook = (id, readBook) => {
     if(readBook === true) {
         myLibrary[id].read = false
     } else if(readBook === false) {
